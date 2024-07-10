@@ -1,0 +1,112 @@
+@import url(vars.css);
+
+.graph {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    height: 90dvh;
+    padding: 10px;
+}
+
+.graph-interface {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 10px;
+    gap: 10px;
+}
+
+.function {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--block-background-color);
+    padding: 10px 10px;
+    gap: 6px;
+    border-radius: 2dvh;
+    overflow: hidden;
+    width: 100%;
+}
+
+#color-pick {
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+.color-palette {
+    width: 100%;
+    height: 100%;
+    transform: scale(3);
+    cursor: pointer;
+}
+
+.function-discription {
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.function-entry {
+    flex-grow: 1;
+    height: 20px;
+    padding: 1rem 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--input-background-color);
+    border: none;
+    margin: 5px;
+}
+
+.function .btn {
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    min-height: 25px;
+    font-size: 20px;
+}
+
+.axes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--block-background-color);
+    padding: 10px;
+    border-radius: 2dvh;
+    overflow: hidden;
+    width: 65%;
+    min-height: 50px;
+}
+
+.discription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[class^='input'] {
+    display: flex;
+    gap: 10px;
+}
+
+[class^='neg'], [class^='pos'] {
+    background-color: var(--input-background-color);
+    border: none;
+    width: 75px;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+.graph-canvas {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--canvas-background-color);
+    overflow: hidden;
+}

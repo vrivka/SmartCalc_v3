@@ -1,0 +1,32 @@
+@import url(vars.css);
+
+.header {
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header .btn {
+    border: none;
+    font-size: 40px;
+    min-height: initial;
+    min-width: initial;
+    border-radius: 0;
+    background-color: var(--main-background-color);
+    color: var(--text-color);
+}
+
+
+#graph {
+    filter: invert(100%);
+}
+
+#help {
+    flex-basis: 10%;
+}
+
+.btn.unhover:hover {
+    filter: none;
+    transition: none;
+}

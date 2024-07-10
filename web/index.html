@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SmartCalc_v3</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/script.js" type="module"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="btn unhover" id="calc">Calculator</div>
+        <div class="btn unhover" id="graph">Graph</div>
+        <div class="btn" id="help" title="Help">&quest;</div>
+    </div>
+    <div class="error block-background">
+        <div class="error-container">
+            <div class="error-message"></div>
+            <div class="btn" id="error-close">x</div>
+        </div>
+    </div>
+    <div class="help block-background">
+        <div class="help-window">
+            <div class="btn" id="help-close">x</div>
+            <zero-md src="./help.md" class="help-disc scrollbar"></zero-md>
+        </div>
+    </div>
+    <div class="calc">
+        <div class="calc-row entry-row">
+            <div class="entry scrollbar">
+                <p></p>
+            </div>
+            <div class="btn" id="history" title="History">
+                <img src="./images/history_icon.svg" id="hist-icon">
+            </div>
+        </div>
+        <div class="history scrollbar"></div>
+        <div class="history-clear">
+            <div class="btn" id="clear-history">Clear history</div>
+        </div>
+        <div class="calc-buttons">
+            <div class="calc-row">
+                <div class="btn" id="pi">&pi;</div>
+                <div class="btn" id="(">(</div>
+                <div class="btn" id=")">)</div>
+                <div class="btn" id="clr">C</div>
+                <div class="btn" id="bckspc">&LongLeftArrow;</div>
+            </div>
+
+            <div class="calc-row">
+                <div class="btn" id="e">&exponentiale;</div>
+                <div class="btn" id="exp">exp</div>
+                <div class="btn" id="sqrt">sqrt</div>
+                <div class="btn" id="^">^</div>
+                <div class="btn" id="mod">mod</div>
+                <div class="btn" id="/">&div;</div>
+            </div>
+
+            <div class="calc-row">
+                <div class="btn" id="sin">sin</div>
+                <div class="btn" id="asin">asin</div>
+                <div class="btn" id="7">7</div>
+                <div class="btn" id="8">8</div>
+                <div class="btn" id="9">9</div>
+                <div class="btn" id="*">&#215;</div>
+            </div>
+
+            <div class="calc-row">
+                <div class="btn" id="cos">cos</div>
+                <div class="btn" id="acos">acos</div>
+                <div class="btn" id="4">4</div>
+                <div class="btn" id="5">5</div>
+                <div class="btn" id="6">6</div>
+                <div class="btn" id="-">&minus;</div>
+            </div>
+
+            <div class="calc-row">
+                <div class="btn" id="tan">tan</div>
+                <div class="btn" id="atan">atan</div>
+                <div class="btn" id="1">1</div>
+                <div class="btn" id="2">2</div>
+                <div class="btn" id="3">3</div>
+                <div class="btn" id="+">&plus;</div>
+            </div>
+
+            <div class="calc-row">
+                <div class="btn" id="ln">ln</div>
+                <div class="btn" id="log">log</div>
+                <div class="btn" id="negate">&plusmn;</div>
+                <div class="btn" id="0">0</div>
+                <div class="btn" id=".">.</div>
+                <div class="btn" id="=">&equals;</div>
+            </div>
+        </div>
+    </div>
+    <div class="graph">
+        <div class="graph-interface">
+            <div class="function">
+                <div class="btn" id="color-pick">
+                    <input class="color-palette" title="Change color" type="color" value="#ffff00">
+                </div>
+                <span class="function-discription">f(x):</span>
+                <input class="function-entry" placeholder="Enter function..." type="text">
+                <div class="btn" id="draw" title="Draw graph">&check;</div>
+                <div class="btn" id="clear" title="Clear">x</div>
+            </div>
+            <div class="axes">
+                <div class="axis-x">
+                    <span class="discription">X-axis</span>
+                    <div class="input-x">
+                        <input type="number" class="neg-x" value="-10">
+                        <input type="number" class="pos-x" value="10">
+                    </div>
+                </div>
+                <div class="axis-y">
+                    <span class="discription">Y-axis</span>
+                    <div class="input-y">
+                        <input type="number" class="neg-y" value="-10">
+                        <input type="number" class="pos-y" value='10'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="graph-canvas"></div>
+    </div>
+</body>
+
+</html>
